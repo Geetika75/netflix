@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+* a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    background-color: black;
+}
+.mainNetflixContainer{
+    /* border: 2px solid red; */
+    /* padding: 0rem 2rem; */
+    
+}
+.backgroundImage{
+    background-image: url("./Netfli_Banner.jpg");
+    filter: blur(16px);
+    height: 100vh;
+    position: relative;
+}
+.pinkOverLay{
+    background-color: rgba(61, 21, 27, 0.807);
+    height: 100%;
+    width: 100%;
+}
+.content{
+    position: absolute; 
+    top: 0%; 
+    /* border: 2px solid white; */
+    background-color: rgba(0,0,0,.5);
+    padding:0rem 2rem ;
+}
+
+.nav{
+    /* border: 2px solid green; */
+    height: 20vh;
+    /* width: 100%; */
+    position: fixed;
+    z-index: 1000;
+   
+}
+.navUpper{
+    /* border: 2px solid blue; */
+    display: flex;
+    height: 50%;
+}
+.navUpperLeft{
+    /* border: 2px solid red; */
+    width: 50%;
+
+}
+.Netflix_Logo{
+    width: 28%;
+}
+.navUpperRight{
+    /* border: 2px solid green; */
+    width: 50%;
+    margin-right: 2rem;
+}
+.navLower{
+    /* width: 100%;
+    position: fixed;
+    z-index: 1000; */
+}
+.navButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.languageButtonEng{
+    display: flex;
+    padding: .5rem .8rem;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+}
+.signInButton{
+    background-color: solid #ffff;
+    padding: .5rem .8rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+}
+.languageButtonEng{
+    margin-left: 5px;
+}
+.pauseButton{
+    position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navLower{
+    /* border: 2px solid red; */
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+    
+.menu{
+    /* border: 2px solid green; */
+    width: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; 
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.5);
+    backdrop-filter:blur(7px) ;
+    height: 7vh;   
+}
+.menuList{
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.section{
+    margin-top: 20vh;
+}
+.banner{
+    /* border: 2px solid red;  */
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;   
+}
+
+
+.bannerInner{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    animation: moveBackground 100s linear infinite;
+}
+    
+
+.bannerInner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+ 
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.7), black);     
+    z-index: 1;
+    pointer-events: none;
+} 
+/* Animation for moving background */
+@keyframes moveBackground {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move left by half the container width */
+    }
+  }
+
+.bannerContainer{
+    /* border: 2px solid red;  */
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+
+}
+.bannerContainer h2{
+   font-size: 4rem;
+   /* border: 2px solid green; */
+   width: 50%;
+   text-align: center;
+
+}
+.bannerContainer h4{
+    font-size: 1.5rem;
+    margin: 20px;
+
+}
+.bannerContainer p{
+    font-size: 1rem;
+    margin: 20px;
+}
+.bannerSignIn{
+    /* border: 2px solid green;  */
+    width: 50%;
+    display: flex;
+    justify-content:space-between ;
+}
+.emailInput{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    outline: none;
+    width: 60%;
+    background-color: rgba(255,255,255,.4);
+    color: white;
+    font-size: 1rem;
+}
+.emailInput::placeholder{
+    color: white;
+}
+
+.getStarted{
+    width: 30%;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #ffff;
+    font-size: 1.2rem;
+    font-weight: 900;
+
+}
+.bannerCurve{
+    /* border: 2px solid green;  */
+    width: 100%;
+    height:60px ;
+    position: relative;
+    top: 50px;
+    border-radius: 50% 50% 0 0 / 20px;
+    background-color: rgba(37, 16, 19, 0.797);
+    
+}
+.backgroundImageCurve{
+    border: 2px solid purple;
+    /* background-image: url("./Netfli_Banner.jpg"); */
+    filter: blur(16px);
+    height: 100vh;
+    position: relative;
+    border-radius: 50% 50% 0 0 / 20px;
+    width: 100%;
+ 
+}
+.pinkOverLayCurve{
+    border: 2px solid orange;
+    background-color: rgba(25, 15, 17, 0.67);
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 50% 0 0 / 5px;
+    position: relative;
+    z-index: 2; 
+    bottom: 0;
+
+}
+
+.carousel{
+    /* border: 2px solid red; */
+    color: white;
+    width: 80%;
+    margin-left: 8rem;
+    height: 380px;
+
+
+}
+.carousel h2,
+.plan h2,
+.reasonToJoin h2,
+.faq h2{
+    /* border: 2px solid red; */
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    position: relative;
+
+
+}
+
+.carouselContainer
+{
+    /* border: 2px solid green; */
+    height: 80%;
+    width: 100%;
+    display: flex;
+    margin: 1.4rem auto;
+    padding-right: 100px;
+    gap: 40px;
+    margin-left: 1.5rem;
+    margin-top: 10px;
+    
+}
+.scrollLeft{
+    border: 2px solid yellow;
+    margin: -5rem;
+    position: absolute;
+}
+
+.carouselCard{
+    /* border: 2px solid yellow; */
+    flex: 0 0 auto;
+    width: 11%;
+    height: 52vh;
+    border-radius: 20px;
+    position: relative;
+}
+
+.carouselImage{
+    width: 100%;
+    height: 100%;
+    
+}
+.carouselImage img{
+    width: 100%;
+    /* max-width: 200px; */
+    height: 70%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.carouselNumber{
+    position: absolute;
+    left: -20px;
+    
+}
+.carouselNumber span{
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.125rem rgb(255, 255, 225);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 4.5rem;
+}
+.plan,
+.reasonToJoin,
+.faq{
+    /* border: 2px solid red; */
+    color: white;
+    width: 80%;
+    margin-left: 8rem;
+    height: 325px;
+    top: 0;
+
+}
+.planContainer,
+.reasonContainer{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 110%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin: 1.4rem auto;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+.reasonContainer{
+    margin-top: 30px;
+}
+
+.planCard{
+    /* border: 2px solid green; */
+    height: 36vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.293);
+}
+.planCard1{
+
+background: linear-gradient(149deg, #1c4072 6.96%, #172847 40.17%, #120c1f 73.39%);
+}
+.planCard2{
+
+background: linear-gradient(149deg, #1d529d 6.96%, #233371 40.17%, #120c1f 73.39%);
+}
+.planCard3{
+
+background: linear-gradient(149deg, #792a95 6.96%, #38216C 40.17%, #120c1f 73.39%);
+}
+.planCard4{
+
+    background: linear-gradient(149deg, #922556 6.96%, #391945 40.17%, #120c1f 73.39%);
+}
+.planUpper,
+.reasonUpper{
+    line-height: 1.6;
+    padding-top: .7rem;
+    margin-left: -1rem;
+}
+.planLower{
+    margin-left: -1rem ;
+}
+.planCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px
+
+}
+
+.planCard p{
+    margin-left: 0;
+    font-size: 0.875rem;
+    
+}
+
+.reasonCard{
+    background: rgba(100, 99, 99, 0.407);
+    height: 30vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem;
+    border-radius: 20px;
+    border: 2px solid rgba(122, 120, 120, 0.258);
+    
+}
+.reasonCard h2{
+    margin-left: 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-right: -1rem;
+    margin-top: -.8rem;
+}
+.reasonUpper p{
+    font-size: 1rem;
+    font-weight: 300;
+    color:rgba(255, 255, 255, 0.719);
+    margin-right: -1rem;
+}
+.reasonLower{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-right: -1rem;
+}
+.reasonLower4{
+    display: flex;
+    justify-content: end;
+    margin-right: -1rem;
+    
+}
+.reasonLower svg{
+    height: 50px;
+    width: 50px;
+}
+.reasonLower4 svg{
+    height: 50px;
+    width: 50px;
+}
+
+.faqContainer{
+    /* border: 2px solid green; */
+    height: 100%;
+    margin: 1.4rem auto;
+    /* gap: 30px; */
+    margin-top: 10px;
+
+}
+.faqCard{
+    width: 104%;
+    border: 2px solid rgba(122, 120, 120, 0.258);
+    
+}
+.faqUpper, 
+.faqAns{
+    background: rgba(100, 99, 99, 0.407);
+    border: 2px solid rgba(122, 120, 120, 0.258);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.faqUpper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.faqUpper span{
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+.faqAns{
+    display: none;
+}
+.faqCard:hover .faqAns{
+    display: block;
+}
+.faqCard h3{
+    margin-top: .7rem;
+}
+.getStartedend{
+    display: flex;
+    justify-content: center;
+    margin-top:40rem;
+}
