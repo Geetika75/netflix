@@ -15,7 +15,7 @@
 - Used colored borders to visualize and divide different sections during development.
 - Implemented unordered lists for the navigation bar.
 - Incorporated images and SVG icons.
-- Gained familiarity with tags like <span>, <img>, <svg>, button, and input.
+- Gained familiarity with tags like span, img, svg, button, and input.
 
 ## CSS
 - Applied hover effects to change color and scale on mouseover.
