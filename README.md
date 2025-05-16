@@ -2,6 +2,8 @@
 
 ### A simple Netflix Clone built using HTML, CSS, and JavaScript.This project helped me put my foundational web development skills into practice and marks the beginning of many exciting projects ahead.
 
+## Live Demo
+[Click here to view the live site] (https://geetika75.github.io/netflix/)
 ## Tech Stack
 - **HTML**
 - **CSS**
